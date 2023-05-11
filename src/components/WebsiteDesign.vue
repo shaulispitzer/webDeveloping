@@ -6,6 +6,6 @@
                 <div class="my-auto">
                     <h1 class="text-white font-bold text-xl m-auto">Website Design</h1>
                     <p class="text-white mb-3">Designing a website to make it look aesthetically pleasing and user friendly.</p>
-                    <a href="#contact" class="p-2 bg-indigo-500 rounded-xl text-white hover:bg-indigo-400 hover:text-white">Drop Me a Line</a></div></div></div>
+                    <a href="#contact" class="p-2 bg-indigo-500 rounded-xl text-white hover:bg-indigo-400 hover:text-white">Drop Me A Line</a></div></div></div>
     </div>
 </template>
