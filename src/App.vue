@@ -8,7 +8,7 @@ import contactAndPhoto from './components/contactAndPhoto.vue';
 
 <template>
   <div class="w-full bg-blue py-4">
-    <p class="font-semibold md:text-4xl text-3xl text-center pb-2">Shauli Spitzer hh</p>
+    <p class="font-semibold md:text-4xl text-3xl text-center pb-2">Shauli Spitzer</p>
     <p class="font-semibold md:text-3xl text-2xl text-center">Front-End Web Developer</p>
   </div>
   <WebsiteDesign></WebsiteDesign>
