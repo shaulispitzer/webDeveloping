@@ -98,7 +98,7 @@ async function startTrick() {
 
 </script>
 <template>
-    <div class="bg-blue h-80 text-center p-4 border-2 border-black mx-4 my-3 relative">
+    <div class="bg-blue h-80 text-center p-4 border-2 border-black rounded-lg mx-4 my-3 relative">
         <h1 class="font-bold text-xl">MIND READING TRICK:</h1>
         <Transition><div v-if="asking">
             <p class="transition-all md:text-2xl text-base sm:text-xl xsm:text-lg my-3">{{displayQuestion}} </p>

@@ -51,7 +51,7 @@ const gematriaList = {
         א:1, ב:2, ג:3, ד:4, ה:5, ו:6 ,ז:7, ח:8, ט:9, י:10, כ:20, ך:20, ל:30, מ:40, ם:40, נ:50, ן:50, ס:60, ע:70, פ:80, ף:80, צ:90, ץ:90, ק:100, ר:200, ש:300, ת:400,
     }
 </script>
-<template><div class="w-full text-center pb-2"><div class="gematriaDiv bg-blue p-4 m-4 border-2 border-black block">
+<template><div class="w-full text-center pb-2"><div class="gematriaDiv bg-blue p-4 m-4 border-2 border-black block rounded-lg">
     <h1 class="mx-auto uppercase font-bold text-xl">Gematria:</h1>
     <h1>Put Hebrew Text Here To Find Its Gematria!</h1>
     <div class="checkbox mb-2">
