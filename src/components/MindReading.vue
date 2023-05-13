@@ -2,6 +2,7 @@
 import {ref, watch} from 'vue';
 import Result from './Result.vue'
 import ErrorMessage from './ErrorMessage.vue'
+import wait from 'wait';
 let inputValue = ref('')
 let asking = ref(false);
 let questions = [{question: 'Divide the number by 3, and type the remainder below. If the remainder is 0, type 0 instead.', max:2, multiplyBy: 70, position: 'first'},
@@ -13,6 +14,7 @@ let correctAnswer = ref(false);
 let showAnswer = ref(false);
 let theAnswer = ref('');
 let questionNumber = ref('');
+let qDisplay = ref(true)
 
 const vFocus = {
   mounted: (el) => el.focus()
@@ -29,7 +31,10 @@ correctAnswer.value = false}
     else{
     correctAnswer.value = false};
 })
- function ask(sheila){
+async function ask(sheila){
+    qDisplay.value = false;
+    await wait(0);
+    qDisplay.value = true;
     displayQuestion.value = sheila.question;
     questionNumber.value = sheila.position;
     return new Promise(async(resolve, reject)=>{
@@ -101,7 +106,9 @@ async function startTrick() {
     <div class="bg-blue h-80 text-center p-4 border-2 border-black rounded-lg mx-4 my-3 relative">
         <h1 class="font-bold text-xl">MIND READING TRICK:</h1>
         <Transition><div v-if="asking">
-            <p class="transition-all md:text-2xl text-base sm:text-xl xsm:text-lg my-3">{{displayQuestion}} </p>
+            <Transition name="question">
+            <p v-if="qDisplay" class="transition-all md:text-2xl text-base sm:text-xl xsm:text-lg my-3">{{displayQuestion}} </p>
+            </Transition>
         <div class="outer absolute  bottom-15 w-full"><div class="inputAndButton relative inline-block">  
          <span v-if="!correctAnswer" class=" text-red-700 text-sm md:text-base sm:text-sm absolute md:w-max sm:top-[5px] top-12 sm:right-[105%] sm:w-48">The Number May Only Be Between 0 and {{ maxAnswer }}</span>
          <input type="text"  v-model="inputValue" v-focus maxlength="1" class="mr-2 p-2 rounded-md w-10 border border-gray-600">
@@ -125,5 +132,11 @@ async function startTrick() {
 .v-enter-from
  {
   opacity: 0;
+}
+.question-enter-active{
+    transition: opacity 0.2s ease-in-out;;
+}
+.question-enter-from {
+    opacity: 0;
 }
 </style>
