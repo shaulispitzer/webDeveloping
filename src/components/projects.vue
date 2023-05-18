@@ -5,7 +5,7 @@ import MindReading from './MindReading.vue'
 <template>
 <div class="bg-darkerBlue border-b-2 border-slate-500">
     <div class="w-full text-center">
-        <h1 class="mx-auto font-bold md:text-4xl text-xl pt-3">Some Of My Projects:</h1>
+        <h1 class="mx-auto font-bold md:text-4xl text-xl p-4 font-mono">Here Are Some Of My Projects That You May Like:</h1>
     </div>
     <MindReading></MindReading>
     <Gematria></Gematria>
