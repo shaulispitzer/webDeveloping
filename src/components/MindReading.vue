@@ -6,7 +6,7 @@ import wait from 'wait';
 let inputValue = ref('')
 let asking = ref(false);
 let questions = [{question: 'Divide the number by 3, and type the remainder below. If the remainder is 0, type 0 instead.', max:2, multiplyBy: 70, position: 'first'},
-{question: 'Divide the original number by 5, and type the resulting quotient here.', max:4, multiplyBy: 21, position:'second'},
+{question: 'Divide the original number by 5, and type the remainder here.', max:4, multiplyBy: 21, position:'second'},
 {question: 'Divide the original number by 7, and write down the remainder.', max: 6, multiplyBy:15, position:'third'}];
 let displayQuestion = ref('think of a number between 7 &  105');
 let maxAnswer = ref(0);
