@@ -2,14 +2,14 @@
 import { onMounted } from 'vue';
 import Confetti from 'canvas-confetti';
 onMounted(()=>{
-    const end = Date.now() + 3 * 1000
+    const end = Date.now() + 2 * 1000
 
     // go Buckeyes!
     const colors = ["#d61f69", "#ff99ff","#bada55","#00c1ff"]
 
     ;(function frame() {
         Confetti({
-            particleCount: 20,
+            particleCount: 15,
             angle: 100,
             spread: 100,
             startVelocity: 50,

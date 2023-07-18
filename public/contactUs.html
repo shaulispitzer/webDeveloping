@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+
 <body>
     <script src="https://cdn01.jotfor.ms/static/prototype.forms.js?3.3.41670" type="text/javascript"></script>
 <script src="https://cdn02.jotfor.ms/static/jotform.forms.js?3.3.41670" type="text/javascript"></script>
@@ -50,6 +45,9 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit2","qid":"2","text":"Sub
   span.FITB-inptCont[data-type=selectbox] select,
   span.FITB-inptCont[data-type=timebox] select {
     color: #264B67;
+  }
+  .error-navigation-container {
+    display: none;
   }
   .rating-item input:hover+label {
     color: rgba(0, 112, 141, 0.75);
@@ -147,7 +145,7 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit2","qid":"2","text":"Sub
   .isSelected .form-matrix-column-headers:nth-last-of-type(2),
   li[data-type=control_inline] input[type=email], li[data-type=control_inline] input[type=number],
   li[data-type=control_inline] input[type=tel], li[data-type=control_inline] input[type=text] {
-    border-color: rgba(0, 112, 141, 0.75);
+    border-color: orange;
   }
   .stageEmpty,
   .form-page-break:before,
@@ -180,9 +178,9 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit2","qid":"2","text":"Sub
   .form-buttons-wrapper, .form-pagebreak, .form-submit-clear-wrapper,
   .form-pagebreak-next,
   .form-pagebreak-back,
-  .form-checkbox:hover+label:before, .form-checkbox:hover+span:before, .form-radio:hover+label:before, .form-radio:hover+span:before,
-  .divider {
-    border-color: #83D0E4;
+  .form-checkbox:hover+label:before, .form-checkbox:hover+span:before, .form-radio:hover+label:before, .form-radio:hover+span:before
+   {
+    border: 0;
   }
   .form-pagebreak-back:focus, .form-pagebreak-next:focus, .form-submit-button:focus {
     border-color: rgba(0, 112, 141, 1);
@@ -195,7 +193,8 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit2","qid":"2","text":"Sub
     background-color:  #83D0E4;
   }
   .form-line-error {
-    background-color: #FFEDED;
+    background: none;
+    border: 1px solid red;
   }
   .form-matrix-column-headers, .form-matrix-row-headers,
   .form-spinner-button-container>*,
@@ -263,6 +262,13 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit2","qid":"2","text":"Sub
   .page-section li.form-line-active[data-type="control_button"] {
     background-color: #DAF3FA;
   }
+  .form-line-active{
+    background: none;
+  }
+li.form-line-active  input, li.form-line-active textarea{
+    border: 2px solid orange;
+    
+  } 
   .appointmentCalendar .calendarDay.isSelected:after {
     color: #FFFFFF;
   }
@@ -275,15 +281,15 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit2","qid":"2","text":"Sub
   .form-line[data-payment="true"] .form-product-item .p_checkbox:hover .select_border,
   .form-checkbox:hover+label:before, .form-checkbox:hover+span:before, .form-radio:hover+label:before, .form-radio:hover+span:before,
   .calendar.popup:before {
-    border-color: rgba(0, 112, 141, 0.5);
+    border-color: orange;
     box-shadow: 0 0 0 2px rgba(0, 112, 141, 0.25);
   }
   .form-dropdown:focus, .form-textarea:focus, .form-textbox:focus, .signature-wrapper:focus,
   li[data-type=control_fileupload] .qq-upload-button-focus,
   .form-checkbox:focus+label:before, .form-checkbox:focus+span:before, .form-radio:focus+label:before, .form-radio:focus+span:before,
   .calendar.popup:before {
-    border-color: rgba(0, 112, 141, 1);
-    box-shadow: 0 0 0 3px rgba(0, 112, 141, 0.25);
+    border:2px solid orange;
+    box-shadow: 0 0 0 3px rgba(141, 33, 0, 0.25);
   }
   .calendar.popup table tbody td{
     box-shadow: none;
@@ -524,6 +530,7 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit2","qid":"2","text":"Sub
   
     .form-all {
       background-image: none;
+      box-shadow: none;
     }
   .form-all:before { content: none; } .form-all { margin-top: 20px; }/*PREFERENCES STYLE*//*__INSPECT_SEPERATOR__*/
 .form-label.form-label-auto {
