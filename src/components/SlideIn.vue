@@ -13,14 +13,12 @@ const props = defineProps({
 });
 const showing = ref(false);
 const componentRef = ref(null);
-const hasBeenShown = ref(false);
 
 const observer = new IntersectionObserver((entries) => {
   const entry = entries[0];
-  if (!hasBeenShown.value && entry.isIntersecting) {
+  if (entry.isIntersecting) {
     showing.value = true;
-    hasBeenShown.value = true; // Mark the component as shown once
-    observer.unobserve(componentRef.value); // Unobserve to prevent future triggers
+    observer.unobserve(componentRef.value);
   }
 });
 
