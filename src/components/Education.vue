@@ -1,8 +1,8 @@
 <template>
   <div class="w-full h-auto bg-blue text-center p-2">
     <p class="text-2xl font-bold font-sans">
-      I am Self-taught in web development through online research and personal
-      projects
+      I have a passion for learning and I am always looking for new challenges
+      and opportunities to grow and develop my skills.
     </p>
   </div>
 </template>
