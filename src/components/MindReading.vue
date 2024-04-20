@@ -160,8 +160,8 @@ async function startTrick() {
       <ErrorMessage v-if="theAnswer === 'wrong'"></ErrorMessage>
       <Result v-if="theAnswer !== 'wrong'">{{ theAnswer }}</Result>
     </div>
-    <div class="mt-5" v-if="!asking || showAnswer">
-      <p class="text-base pb-1 md:text-xl">
+    <div class="mt-5" v-if="!asking">
+      <p class="text-base pb-1 md:text-xl" v-if="!showAnswer">
         Think of a number between 7 and 105, Then click the start button to
         {{ showAnswer ? "restart the game" : "begin" }}!
       </p>
